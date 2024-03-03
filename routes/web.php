@@ -15,3 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',[PollController::class,'index'])->name('home');
+
+Route::get('/about-us',function(){
+    return view('about.about-us');
+});
+
+Route::get('/edit/{id?}',[PollController::class,'edit'])->name('poll.edit');
